@@ -1,0 +1,9 @@
+#!/bin/bash
+
+. /etc/os-release
+
+echo "dovianutils - sysinfo (0.1)"
+echo
+echo "System: $ID $VERSION_ID $(uname -m)"
+echo "Kernel: $(uname -r)"
+echo "Packages: $(dpkg -l | wc -l) (dpkg)"

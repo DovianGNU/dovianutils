@@ -1,0 +1,5 @@
+echo "dovianutils version 0.1"
+echo "This project is licensed under BSD-2-Clause: use, modify and redistribute freely, while keeping the copyright notice and license."
+echo
+echo "Available utilities:"
+echo "repeat sysinfo"

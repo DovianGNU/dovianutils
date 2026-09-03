@@ -1,0 +1,9 @@
+Package: dovianutils
+Version: 0.1.0-dov1+
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: DovianGNU <doviangnu@proton.me>
+Depends: bash
+Description: Dovian utilities
+ A collection of useful utilities and scripts for Dovian GNU/Linux.
