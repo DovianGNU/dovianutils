@@ -1,0 +1,152 @@
+.TH DOVIANUTILS 1 "10 September 2026" "dovianutils 0.1.0" "Dovian GNU/Linux"
+
+.SH NAME
+dovianutils - Dovian GNU/Linux userspace utilities
+
+.SH SYNOPSIS
+.B dovianutils
+
+.SH DESCRIPTION
+.B dovianutils
+is a collection of small userspace utilities developed for the
+Dovian GNU/Linux ecosystem.
+
+The utilities are designed to provide simple command-line tools for
+common system and shell-related tasks.
+
+The package currently provides the following utilities:
+
+.TP
+.B repeat
+Execute a command a specified number of times.
+
+.TP
+.B sysinfo
+Display basic information about the running system.
+
+.TP
+.B dovianutils
+Display information about the dovianutils package and available utilities.
+
+.SH COMMANDS
+
+.SS repeat
+.B repeat
+executes a command repeatedly.
+
+.PP
+Usage:
+
+.PP
+.nf
+.B repeat COUNT COMMAND [ARGUMENT...]
+.fi
+
+.PP
+.I COUNT
+must be a non-negative integer.
+
+If the specified command fails, execution stops and
+.B repeat
+returns the exit status of the failed command.
+
+Example:
+
+.PP
+.nf
+.B repeat 5 echo "Hello, Dovian!"
+.fi
+
+.SS sysinfo
+.B sysinfo
+displays basic information about the current operating system.
+
+The command currently reports:
+
+.IP (bu 2
+operating system identification;
+.IP (bu 2
+operating system version;
+.IP (bu 2
+system architecture;
+.IP (bu 2
+kernel version;
+.IP (bu 2
+the number of packages reported by dpkg.
+
+.PP
+Example:
+
+.PP
+.nf
+.B sysinfo
+.fi
+
+.SS dovianutils
+.B dovianutils
+displays the installed dovianutils version, license information,
+and a list of available utilities.
+
+.PP
+Example:
+
+.PP
+.nf
+.B dovianutils
+.fi
+
+.SH FILES
+
+.TP
+.I /usr/bin/dovianutils
+Main dovianutils information command.
+
+.TP
+.I /usr/bin/repeat
+Command repetition utility.
+
+.TP
+.I /usr/bin/sysinfo
+System information utility.
+
+.TP
+.I /usr/share/man/man1/
+Manual pages for dovianutils commands.
+
+.SH EXIT STATUS
+
+.TP
+.B 0
+The command completed successfully.
+
+.TP
+.B 2
+Invalid command-line arguments were supplied.
+
+.PP
+Individual utilities may return the exit status of an underlying
+command when execution fails.
+
+.SH ENVIRONMENT
+
+.TP
+.I /etc/os-release
+Used by
+.B sysinfo
+to obtain operating system identification and version information.
+
+.SH LICENSE
+The dovianutils project is distributed under the
+.B BSD-2-Clause
+license.
+
+.SH AUTHOR
+DovianGNU
+
+.SH SEE ALSO
+.BR repeat (1),
+.BR sysinfo (1)
+
+.SH NOTES
+dovianutils is part of the Dovian GNU/Linux project, an independent
+GNU/Linux distribution ecosystem built around Debian.
